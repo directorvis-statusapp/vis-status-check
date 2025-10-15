@@ -1,7 +1,7 @@
 // script.js - VIS Status Checker
 // CSV is expected with header row containing columns:
 // "Registration#", "Name", "Hours Completed", "Status"
-const CSV_URL = "https://docs.google.com/spreadsheets/d/1bZQCuJmxoXDkBUEwf_aLZOwVJNRW3h52vMcWKR1yTqI/edit?usp=sharing";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQAlPiSLTrsIzp8K12t-gfCCuWApaNiRAJ1PvlhK6yDddpN9fgtIjuwZM8oPhQCLbMkyqeuquz0tjBI/pub?output=csv";
 let csvCache = null;
 
 const regInput = document.getElementById('regInput');
