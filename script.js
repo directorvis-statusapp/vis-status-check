@@ -1,7 +1,7 @@
 // script.js - VIS Status Checker
 // CSV is expected with header row containing columns:
 // "Registration#", "Name", "Hours Completed", "Status"
-const CSV_URL = "https://onlinepgc-my.sharepoint.com/personal/report_vis_ucp_edu_pk/_layouts/15/download.aspx?UniqueId=494c5fb2%2D7a49%2D44ee%2D9b8d%2D9204a72c1c78";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/1bZQCuJmxoXDkBUEwf_aLZOwVJNRW3h52vMcWKR1yTqI/edit?usp=sharing";
 let csvCache = null;
 
 const regInput = document.getElementById('regInput');
