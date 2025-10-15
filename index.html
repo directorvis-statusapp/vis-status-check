@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UCP — VIS Volunteer Status Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="ucp-logo.png" alt="UCP" class="logo" onerror="this.style.display='none'">
+      <h1>VIS Volunteer Status Checker</h1>
+      <p class="lead">Enter your Registration# to check VOLUNTEER completion status. No login required.</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <label for="regInput">Registration Number</label>
+        <input id="regInput" placeholder="e.g., FA21-BCS-123" autocomplete="off">
+        <div class="buttons">
+          <button id="checkBtn">Check Status</button>
+          <button id="clearBtn" class="muted">Clear</button>
+        </div>
+
+        <div id="output" class="output" aria-live="polite"></div>
+        <div id="meta" class="meta"></div>
+      </div>
+
+      <div class="note">
+        <strong>Data source:</strong> Hosted CSV (read-only). If your record is incorrect, contact VIS office.
+      </div>
+
+      <div class="help">
+        <h3>How it works</h3>
+        <ol>
+          <li>The page fetches the VIS CSV file from a secure UCP link (read-only).</li>
+          <li>It looks up the entered Registration# and shows one of three results:<br>
+            ✅ <em>Completed 65 hours — Eligible for Transcript</em><br>
+            ⚠️ <em>In progress</em><br>
+            ❌ <em>No record found</em>
+          </li>
+        </ol>
+      </div>
+    </main>
+
+    <footer>
+      <small>University of Central Punjab — Volunteers in Service (VIS)</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
