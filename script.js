@@ -105,7 +105,7 @@ async function performCheck(){
     }
 
     if (!matched) {
-      output.textContent = '❌ No record found Or Status is Incomplete';
+      output.textContent = '❌ No Record Found';
       output.classList.add('error');
       return;
     }
@@ -119,7 +119,7 @@ async function performCheck(){
     const statusLower = String(statusRaw).toLowerCase();
 
     // Decide the display message
-    let message = '❌ No record found Or Status is Incomplete';
+    let message = '❌ No Record Found';
     let cls = 'error';
 
     if (hours >= 65 || statusLower.includes('completed')) {
@@ -130,7 +130,7 @@ async function performCheck(){
       cls = 'warn';
     } else {
       // fallback if status explicitly says "not started" etc
-      message = '❌ No record found Or Status is Incomplete';
+      message = '❌ No Record Found';
       cls = 'error';
     }
 
