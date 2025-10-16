@@ -105,7 +105,7 @@ async function performCheck(){
     }
 
     if (!matched) {
-      output.textContent = '❌ No record found';
+      output.textContent = '❌ No record found Or Status is Incomplete';
       output.classList.add('error');
       return;
     }
@@ -119,18 +119,18 @@ async function performCheck(){
     const statusLower = String(statusRaw).toLowerCase();
 
     // Decide the display message
-    let message = '❌ No record found';
+    let message = '❌ No record found Or Status is Incomplete';
     let cls = 'error';
 
     if (hours >= 65 || statusLower.includes('completed')) {
-      message = '✅ Completed 65 hours — Eligible for Transcript';
+      message = '✅ Completed 65 hours';
       cls = 'success';
     } else if ((hours > 0 && hours < 65) || statusLower.includes('in progress') || statusLower.includes('in-progress')) {
       message = '⚠️ In progress';
       cls = 'warn';
     } else {
       // fallback if status explicitly says "not started" etc
-      message = '❌ No record found';
+      message = '❌ No record found Or Status is Incomplete';
       cls = 'error';
     }
 
